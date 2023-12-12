@@ -1,11 +1,9 @@
-import Navbar from "../components/Navbar";
 import hero from "../assets/img/hero.svg";
 import bg from "../assets/img/hero-bg.svg";
 
 export default function Home() {
   return (
-    <div className="px-[10%] relative">
-      <Navbar />
+    <>
       <header className="flex min-h-screen">
         <div>
           <h1 className="mt-16 text-heading text-3xl font-thin">
@@ -21,14 +19,14 @@ export default function Home() {
             first step towards a brighter and more balanced campus life.
           </p>
           <div className="mt-12 flex space-x-4">
-            <button className="text-white bg-primary py-2 px-4 whitespace-nowrap">
+            <button className="text-white bg-primary py-2 px-4 hover:bg-accent whitespace-nowrap">
               Go to Depression Screening Test
             </button>
-            <button className="border-primary border-2 py-2 px-4 whitespace-nowrap">
+            <button className="border-primary border-2 py-2 px-4 hover:shadow-md whitespace-nowrap">
               Mental Health Resources
             </button>
           </div>
-          <p className="text-xs mt-4">
+          <p className="text-xs mt-2">
             <span className="font-bold">FREE. </span>
             No sign-up required
           </p>
@@ -40,6 +38,6 @@ export default function Home() {
         className="absolute top-0 h-full w-full -z-20 object-cover object-center"
         aria-hidden="true"
       />
-    </div>
+    </>
   );
 }

@@ -5,10 +5,9 @@ export default {
     extend: {
       colors: {
         heading: "#091133",
-        body: "#6F7CB2",
+        body: "#505F98",
         accent: "#003BD2",
         primary: "#111B47",
-        navItem: "#505F98",
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
@@ -24,6 +23,7 @@ export default {
         "5xl": ["clamp(2.28rem, calc(0.94rem + 6.71vw), 5.72rem)", "1"],
         "6xl": ["clamp(2.57rem, calc(0.78rem + 8.95vw), 7.15rem)", "1"],
       },
+      
     },
   },
   plugins: [],
