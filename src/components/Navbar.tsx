@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.svg";
 
 export default function Navbar() {
@@ -14,11 +14,11 @@ export default function Navbar() {
         <img src={logo} alt="Go to Home" />
       </NavLink>
       <div className="flex items-center space-x-2 text-navItem cursor-pointer">
-        <a>
+        <Link to="/screening">
           <button className="text-white bg-primary py-2 px-4 hover:bg-accent">
             Take Depression Test
           </button>
-        </a>
+        </Link>
         <p className="text-body">Sign-in</p>
       </div>
     </nav>
@@ -30,7 +30,9 @@ function NavItem({ href, text }: { href: string; text: string }) {
     <li className="hover:text-blue-950">
       <NavLink
         to={href}
-        className={({ isActive }) => (isActive ? "text-blue-950" : "")}
+        className={({ isActive }) =>
+          isActive ? "text-blue-950 font-bold" : ""
+        }
       >
         {text}
       </NavLink>
