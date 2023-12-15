@@ -5,7 +5,7 @@ export default function Screening() {
   const accordionData = [
     {
       id: 1,
-      question: "What is the PHQ-9 Form?",
+      question: "What is the PHQ-9 Questionnaire?",
       answer:
         "The Patient Health Questionnaire 9 (PHQ-9) is a standardized questionnaire used to assess and measure the severity of depressive symptoms. It consists of nine questions related to mood, energy levels, sleep, and appetite.",
       additionalLinks: [
@@ -42,7 +42,7 @@ export default function Screening() {
   return (
     <>
       <p className="text-base text-heading mt-4 font-bold">
-        PHQ-9 Depression Screening Questionnaire
+        PHQ-9 Questionnaire
       </p>
       <Accordion accordionData={accordionData} />
       <p className="mt-12">
