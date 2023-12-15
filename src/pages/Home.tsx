@@ -5,8 +5,10 @@ import SectionItem from "../components/Home/SectionItem";
 
 import stressGirl from "../assets/img/stress-girl.svg";
 import happyBoy from "../assets/img/happy-boy.svg";
+import onlineTest from "../assets/img/online-test.svg";
 import test from "../assets/icons/test.svg";
 import community from "../assets/icons/community.svg";
+import HomeSection from "../components/Home/HomeSection";
 
 export default function Home() {
   return (
@@ -25,12 +27,12 @@ export default function Home() {
             </h1>
             <p className="text-body mt-2">
               Ever felt the weight of university life impacting your mental
-              well-being? <b>You&apos;re not alone</b>. Our mission is to shed light on
-              the silent mental struggles of Jamaican university students. Join
-              us in breaking the stigma and discovering the support you deserve.
-              Take our depression test, explore mental health resources, and
-              take the first step towards a brighter and more balanced campus
-              life.
+              well-being? <b>You&apos;re not alone</b>. Our mission is to shed
+              light on the silent mental struggles of Jamaican university
+              students. Join us in breaking the stigma and discovering the
+              support you deserve. Take our depression test, explore mental
+              health resources, and take the first step towards a brighter and
+              more balanced campus life.
             </p>
             <div className="mt-12 flex space-x-4">
               <Link to="/screening">
@@ -88,21 +90,36 @@ export default function Home() {
           </div>
           <img src={stressGirl} className="w-[500px]" alt="stressed girl" />
         </section>
-        <section className="flex">
-          <img src={happyBoy} className="w-[500px]" alt="" />
-          <div className="space-y-4">
-            <h2 className="text-heading text-lg">
-              Embracing Emotional Well-being
-            </h2>
-            <p>
-              Recognizing the signs, acknowledging emotions, and seeking
-              support—it&apos;s all part of a journey toward emotional
-              well-being. We&apos;re here to share experiences, validate
+        <HomeSection
+          img={happyBoy}
+          heading={"Embracing Emotional Well-being"}
+          body={`Recognizing the signs, acknowledging emotions, and seeking
+              support—it's all part of a journey toward emotional
+              well-being. We're here to share experiences, validate
               feelings, and guide you toward the resources that can make a
-              meaningful difference.
-            </p>
-          </div>
-        </section>
+              meaningful difference.`}
+        />
+        <HomeSection
+          img={onlineTest}
+          heading={"Understanding the PHQ-9 Test"}
+          body={`Curious about where you stand? The PHQ-9 self-assessment is a simple yet powerful tool used to 
+          gauge the presence and severity of depression symptoms. It is not a diagnosis, 
+          but a guide—a step-by-step process designed to help you understand your emotional 
+          landscape better.`}
+          btnText="Go to test"
+          btnHref="/screening"
+        />
+        <HomeSection
+          img={onlineTest}
+          heading={"Seeking Professional Help"}
+          body={`Completing the screening test is a courageous first step towards understanding your emotional well-being. It's a vital checkpoint 
+          in recognizing your feelings. However, remember, it's just the beginning. If the results prompt concern or if 
+          you feel overwhelmed, seeking professional help is highly recommended. 
+          Explore our comprehensive mental health resources page—a directory of contacts and centers specialized in 
+          aiding university students dealing with mental health challenges.`}
+          btnText="Mental Health Resources"
+          btnHref="/resources"
+        />
       </main>
     </>
   );

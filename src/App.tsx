@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import NotFound from "./pages/NotFound";
+import Screening from "./pages/Screening";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/screening" element={<Screening />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
