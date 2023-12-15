@@ -6,6 +6,7 @@ import SectionItem from "../components/Home/SectionItem";
 import stressGirl from "../assets/img/stress-girl.svg";
 import happyBoy from "../assets/img/happy-boy.svg";
 import onlineTest from "../assets/img/online-test.svg";
+import psychologist from "../assets/img/psychologist.svg";
 import test from "../assets/icons/test.svg";
 import community from "../assets/icons/community.svg";
 import HomeSection from "../components/Home/HomeSection";
@@ -110,7 +111,7 @@ export default function Home() {
           btnHref="/screening"
         />
         <HomeSection
-          img={onlineTest}
+          img={psychologist}
           heading={"Seeking Professional Help"}
           body={`Completing the screening test is a courageous first step towards understanding your emotional well-being. It's a vital checkpoint 
           in recognizing your feelings. However, remember, it's just the beginning. If the results prompt concern or if 

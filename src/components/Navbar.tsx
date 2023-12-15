@@ -1,7 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/logo.svg";
 
 export default function Navbar() {
+  const location = useLocation();
   return (
     <nav className="flex justify-between py-4" aria-label="Primary Navigation">
       <ul className="group flex text-body space-x-2 cursor-pointer">
@@ -14,11 +15,14 @@ export default function Navbar() {
         <img src={logo} alt="Go to Home" />
       </NavLink>
       <div className="flex items-center space-x-2 text-navItem cursor-pointer">
-        <Link to="/screening">
-          <button className="text-white bg-primary py-2 px-4 hover:bg-accent">
-            Take Depression Test
-          </button>
-        </Link>
+        {location.pathname !== "/screening" ? (
+          <Link to="/screening">
+            <button className="text-white bg-primary py-2 px-4 hover:bg-accent">
+              Take Depression Test
+            </button>
+          </Link>
+        ) : null}
+
         <p className="text-body">Sign-in</p>
       </div>
     </nav>
@@ -27,7 +31,7 @@ export default function Navbar() {
 
 function NavItem({ href, text }: { href: string; text: string }) {
   return (
-    <li className="hover:text-blue-950">
+    <li className="hover:text-blue-950  hover:font-medium">
       <NavLink
         to={href}
         className={({ isActive }) =>

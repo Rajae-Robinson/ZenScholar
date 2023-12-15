@@ -20,7 +20,10 @@ export default function SectionItem({
       <img src={icon} alt="" />
       <h3 className="text-heading text-sm">{title}</h3>
       <p>{description}</p>
-      <Link to={linkHref} className="text-accent font-medium">
+      <Link
+        to={linkHref}
+        className="text-accent font-medium hover:underline transition-all"
+      >
         {linkText}
       </Link>
     </div>
