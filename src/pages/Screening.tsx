@@ -51,6 +51,18 @@ export default function Screening() {
         been bothered by any of the following problems?
       </p>
       <PHQ9Form />
+      <p className="text-accent">
+        Questionnaire adapted from&nbsp;
+        <a
+          href="https://www.apa.org/depression-guideline/patient-health-questionnaire.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-300 underline"
+        >
+          American Psychological Association
+        </a>
+        .
+      </p>
     </>
   );
 }
