@@ -46,7 +46,7 @@ export default function Screening() {
       </p>
       <Accordion accordionData={accordionData} />
       <InfoAlert />
-      <p className="mt-8">
+      <p className="mt-8 text-sm">
         Please answer honestly. Over the <b>last 2 weeks</b>, how often have you
         been bothered by any of the following problems?
       </p>

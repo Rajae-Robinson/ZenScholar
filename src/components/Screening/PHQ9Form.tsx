@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ResultsModal from "./ResultsModal";
 
 export default function PHQ9Form() {
   const questions = [
@@ -31,6 +32,17 @@ export default function PHQ9Form() {
     return answers.reduce((acc, currentValue) => acc + currentValue, 0);
   };
 
+  const determineDepressionLevel = (score: number): string => {
+    if (score == 0) return "No Depression";
+    else if (score >= 1 && score <= 4) return "Minimal Depression";
+    else if (score >= 5 && score <= 9) return "Mild Depression";
+    else if (score >= 10 && score <= 14) return "Moderate Depression";
+    else if (score >= 15 && score <= 19) return "Moderately Severe Depression";
+    else if (score >= 20 && score <= 27) return "Severe Depression";
+
+    return "Score not recognised.";
+  };
+
   return (
     <div className="my-4 border-4 border-blue-800 p-4">
       <form className="space-y-4" onSubmit={handleSubmit}>
@@ -48,6 +60,7 @@ export default function PHQ9Form() {
                   value="0"
                   onChange={(e) => handleAnswerChange(index, e.target.value)}
                   required
+                  disabled={submitted}
                 />
                 &nbsp;Not at all
               </label>
@@ -59,6 +72,7 @@ export default function PHQ9Form() {
                   value="1"
                   onChange={(e) => handleAnswerChange(index, e.target.value)}
                   required
+                  disabled={submitted}
                 />
                 &nbsp;Several days
               </label>
@@ -70,6 +84,7 @@ export default function PHQ9Form() {
                   value="2"
                   onChange={(e) => handleAnswerChange(index, e.target.value)}
                   required
+                  disabled={submitted}
                 />
                 &nbsp;More than half the days
               </label>
@@ -81,6 +96,7 @@ export default function PHQ9Form() {
                   value="3"
                   onChange={(e) => handleAnswerChange(index, e.target.value)}
                   required
+                  disabled={submitted}
                 />
                 &nbsp;Nearly every day
               </label>
@@ -88,16 +104,21 @@ export default function PHQ9Form() {
           </div>
         ))}
         <div className="mt-6">
-          <button
-            type="submit"
-            className="bg-primary text-white px-4 py-2"
-          >
-            Submit
-          </button>
+          {submitted ? (
+            <ResultsModal
+              heading={`Result: ${determineDepressionLevel(calculateScore())}`}
+              body={`Based on your responses you recieved a total score of ${calculateScore()}.`}
+            />
+          ) : (
+            <button
+              type="submit"
+              className="bg-primary text-white px-4 py-2 disabled:bg-gray-500"
+              disabled={submitted}
+            >
+              Submit
+            </button>
+          )}
         </div>
-        {submitted && (
-          <p className="mt-4 text-green-600">{`Form submitted! Your score is ${calculateScore()}`}</p>
-        )}
       </form>
     </div>
   );
