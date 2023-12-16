@@ -107,7 +107,7 @@ export default function PHQ9Form() {
           {submitted ? (
             <ResultsModal
               heading={`Result: ${determineDepressionLevel(calculateScore())}`}
-              body={`Based on your responses you recieved a total score of ${calculateScore()}.`}
+              body={`Based on your responses you received a total score of ${calculateScore()}.`}
             />
           ) : (
             <button
