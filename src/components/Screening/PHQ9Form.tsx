@@ -39,7 +39,7 @@ export default function PHQ9Form() {
             <p className="text-sm text-accent">{`Q${
               index + 1
             }: ${question} *`}</p>
-            <div className="flex flex-col space-x-4">
+            <div className="flex flex-col ml-8">
               <label htmlFor={`question-${index + 1}-0`}>
                 <input
                   type="radio"
@@ -49,7 +49,7 @@ export default function PHQ9Form() {
                   onChange={(e) => handleAnswerChange(index, e.target.value)}
                   required
                 />
-                Not at all
+                &nbsp;Not at all
               </label>
               <label htmlFor={`question-${index + 1}-1`}>
                 <input
@@ -60,7 +60,7 @@ export default function PHQ9Form() {
                   onChange={(e) => handleAnswerChange(index, e.target.value)}
                   required
                 />
-                Several days
+                &nbsp;Several days
               </label>
               <label htmlFor={`question-${index + 1}-2`}>
                 <input
@@ -71,7 +71,7 @@ export default function PHQ9Form() {
                   onChange={(e) => handleAnswerChange(index, e.target.value)}
                   required
                 />
-                More than half the days
+                &nbsp;More than half the days
               </label>
               <label htmlFor={`question-${index + 1}-3`}>
                 <input
@@ -82,7 +82,7 @@ export default function PHQ9Form() {
                   onChange={(e) => handleAnswerChange(index, e.target.value)}
                   required
                 />
-                Nearly every day
+                &nbsp;Nearly every day
               </label>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function PHQ9Form() {
         <div className="mt-6">
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded"
+            className="bg-primary text-white px-4 py-2"
           >
             Submit
           </button>
