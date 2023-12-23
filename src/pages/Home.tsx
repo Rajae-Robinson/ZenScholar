@@ -8,7 +8,7 @@ import happyBoy from "../assets/img/happy-boy.svg";
 import onlineTest from "../assets/img/online-test.svg";
 import psychologist from "../assets/img/psychologist.svg";
 import test from "../assets/icons/test.svg";
-import community from "../assets/icons/community.svg";
+import searchResources from "../assets/icons/search-resources.svg";
 import HomeSection from "../components/Home/HomeSection";
 
 export default function Home() {
@@ -72,7 +72,7 @@ export default function Home() {
               the whirlwind that young adults navigate. In these moments, mental
               health often takes a backseat.
             </p>
-            <div className="flex mt-4">
+            <div className="flex mt-6">
               <SectionItem
                 icon={test}
                 title="PHQ-9 Screening Form"
@@ -81,11 +81,11 @@ export default function Home() {
                 linkHref="/screening"
               />
               <SectionItem
-                icon={community}
-                title="Community"
-                description="Explore stories from peers who've navigated similar challenges, allowing empathy to pave the way toward healing."
-                linkText="Go to Community >>"
-                linkHref="/community"
+                icon={searchResources}
+                title="Mental Health Resources"
+                description="Access trusted mental health guidance and effective techniques to manage depression, stress, or anxiety, along with contact details for local mental health support centers."
+                linkText="Search Mental Health Resources >>"
+                linkHref="/resources"
               />
             </div>
           </div>

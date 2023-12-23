@@ -19,7 +19,7 @@ export default function SectionItem({
     <div className="space-y-2">
       <img src={icon} alt="" />
       <h3 className="text-heading text-sm">{title}</h3>
-      <p>{description}</p>
+      <p className="leading-relaxed">{description}</p>
       <Link
         to={linkHref}
         className="text-accent font-medium hover:underline transition-all"

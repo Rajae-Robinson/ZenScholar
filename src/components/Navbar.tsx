@@ -8,7 +8,6 @@ export default function Navbar() {
       <ul className="group flex text-body space-x-2 cursor-pointer">
         <NavItem href="/" text="Home" />
         <NavItem href="/resources" text="Resources" />
-        <NavItem href="/community" text="Community" />
         <NavItem href="/about" text="About" />
       </ul>
       <NavLink to="/">
@@ -22,8 +21,6 @@ export default function Navbar() {
             </button>
           </Link>
         ) : null}
-
-        <p className="text-body">Sign-in</p>
       </div>
     </nav>
   );

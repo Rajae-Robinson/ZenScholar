@@ -23,7 +23,7 @@ export default function HomeSection({
         <p>{body}</p>
         {btnText && btnHref ? (
           <Link to={btnHref}>
-            <button className="text-white bg-primary mt-2 py-2 px-4 hover:bg-accent whitespace-nowrap">
+            <button className="text-white bg-primary mt-6 py-2 px-4 hover:bg-accent whitespace-nowrap">
               {btnText}
             </button>
           </Link>
