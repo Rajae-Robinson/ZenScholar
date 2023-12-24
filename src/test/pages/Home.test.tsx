@@ -4,7 +4,7 @@ import Home from "../../pages/Home";
 import { MemoryRouter } from "react-router-dom";
 
 describe("Home Page", () => {
-  test("renders correctly", () => {
+  test("should have btns to redirect to /screening and /resources", () => {
     // Arrange
     render(
       <MemoryRouter initialEntries={["/"]}>

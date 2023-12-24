@@ -1,19 +1,8 @@
 import { useState } from "react";
 import ResultsModal from "./ResultsModal";
+import { PHQ9Questions as questions } from "./constants";
 
 export default function PHQ9Form() {
-  const questions = [
-    "Little interest or pleasure in doing things?",
-    "Feeling down, depressed, or hopeless?",
-    "Trouble falling or staying asleep, or sleeping too much?",
-    "Feeling tired or having little energy?",
-    "Poor appetite or overeating?",
-    "Feeling bad about yourself — or that you are a failure or have let yourself or your family down?",
-    "Trouble concentrating on things, such as reading the newspaper or watching television?",
-    "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual?",
-    "Thoughts that you would be better off dead, or of hurting yourself?",
-  ];
-
   const [answers, setAnswers] = useState(Array(questions.length).fill(0));
   const [submitted, setSubmitted] = useState(false);
 
@@ -44,6 +33,7 @@ export default function PHQ9Form() {
   };
 
   return (
+    <>
     <div className="my-4 border-4 border-blue-800 p-4">
       <form className="space-y-4" onSubmit={handleSubmit}>
         {questions.map((question, index) => (
@@ -121,5 +111,18 @@ export default function PHQ9Form() {
         </div>
       </form>
     </div>
+      <p className="text-accent">
+        Questionnaire adapted from&nbsp;
+        <a
+          href="https://www.apa.org/depression-guideline/patient-health-questionnaire.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-300 underline"
+        >
+          American Psychological Association
+        </a>
+        .
+      </p>
+    </>
   );
 }
