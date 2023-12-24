@@ -34,7 +34,7 @@ export default function PHQ9Form() {
 
   return (
     <>
-    <div className="my-4 border-4 border-blue-800 p-4">
+    <div data-testid="phq9-form" className="my-4 border-4 border-blue-800 p-4">
       <form className="space-y-4" onSubmit={handleSubmit}>
         {questions.map((question, index) => (
           <div key={index} className="space-y-2">

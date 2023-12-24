@@ -23,10 +23,21 @@ describe("Screening Page", () => {
         <Screening />
       </MemoryRouter>
     );
-    const privacyTextRegex = /We do not store any personal data or assessment results\. Your participation is entirely anonymous and confidential\./i;
-    const privacyText =
-      screen.getByText(privacyTextRegex);
+    const privacyTextRegex =
+      /We do not store any personal data or assessment results\. Your participation is entirely anonymous and confidential\./i;
+    const privacyText = screen.getByText(privacyTextRegex);
 
     expect(privacyText).toBeInTheDocument();
+  });
+
+  test("should have PHQ9 form", () => {
+    render(
+      <MemoryRouter>
+        <Screening />
+      </MemoryRouter>
+    );
+    const phq9FormComponent = screen.getByTestId("phq9-form");
+
+    expect(phq9FormComponent).toBeInTheDocument();
   });
 });
