@@ -18,7 +18,7 @@ export default function HomeSection({
 }: IHomeSection) {
   return (
     <Fade triggerOnce>
-      <section className="flex flex-col mt-6 md:flex-row">
+      <section className="flex flex-col mt-6 lg:space-x-20 md:flex-row">
         <img
           src={img}
           className="w-[300px] md:w-[500px] self-center md:self-start"
@@ -28,7 +28,7 @@ export default function HomeSection({
           <h2 className="text-heading text-2xl font-medium md:text-lg md:font-normal">
             {heading}
           </h2>
-          <p>{body}</p>
+          <p className="lg:w-[70%] leading-relaxed">{body}</p>
           {btnText && btnHref ? (
             <Link to={btnHref}>
               <button className="text-white bg-primary mt-6 py-2 px-4 hover:bg-accent whitespace-nowrap">

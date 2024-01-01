@@ -11,7 +11,7 @@ export default function Hero() {
             <span className="font-bold">ZenScholar:</span>
             Tools & Resources for Student Mental Wellness
           </h1>
-          <p className="text-body mt-2">
+          <p className="text-body mt-2 lg:w-[85%]">
             Ever felt the weight of university life impacting your mental
             well-being? <b>You&apos;re not alone</b>. Our mission is to shed
             light on the silent mental struggles of Jamaican university

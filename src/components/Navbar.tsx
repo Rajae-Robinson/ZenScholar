@@ -1,11 +1,27 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import { useState } from "react";
 
 export default function Navbar() {
   const location = useLocation();
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
-    <nav className="flex justify-between py-4" aria-label="Primary Navigation">
-      <ul className="group flex text-body space-x-2 cursor-pointer">
+    <nav
+      className="relative flex justify-between py-4"
+      aria-label="Primary Navigation"
+    >
+      <ul
+        className={`md:flex text-body space-x-2 cursor-pointer ${
+          showMenu
+            ? "absolute right-0 top-10 z-10 bg-white flex flex-col space-x-0 p-4 space-y-2 rounded-md shadow-md"
+            : "hidden"
+        }`}
+      >
         <NavItem href="/" text="Home" />
         <NavItem href="/resources" text="Resources" />
         <NavItem href="/about" text="About" />
@@ -13,7 +29,7 @@ export default function Navbar() {
       <NavLink to="/">
         <img src={logo} alt="Go to Home" />
       </NavLink>
-      <div className="flex items-center space-x-2 text-navItem cursor-pointer">
+      <div className="hidden md:block space-x-2">
         {location.pathname !== "/screening" ? (
           <Link to="/screening">
             <button className="text-white bg-primary py-2 px-4 hover:bg-accent">
@@ -21,6 +37,23 @@ export default function Navbar() {
             </button>
           </Link>
         ) : null}
+      </div>
+      <div className="md:hidden">
+        <button onClick={toggleMenu}>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
       </div>
     </nav>
   );
