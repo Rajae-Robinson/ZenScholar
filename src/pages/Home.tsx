@@ -1,14 +1,12 @@
 import bg from "../assets/img/hero-bg.svg";
-import SectionItem from "../components/Home/SectionItem";
 
-import stressGirl from "../assets/img/stress-girl.svg";
 import happyBoy from "../assets/img/happy-boy.svg";
 import onlineTest from "../assets/img/online-test.svg";
 import psychologist from "../assets/img/psychologist.svg";
-import test from "../assets/icons/test.svg";
-import searchResources from "../assets/icons/search-resources.svg";
-import HomeSection from "../components/Home/HomeSection";
+
 import Hero from "../components/Home/Hero";
+import HomeSection from "../components/Home/HomeSection";
+import MainSection from "../components/Home/MainSection";
 
 export default function Home() {
   return (
@@ -19,42 +17,8 @@ export default function Home() {
         aria-hidden="true"
       />
       <Hero />
-      <main className="mt-16 md:space-y-16">
-        <section className="flex flex-col md:flex-row">
-          <div className="order-2 md:order-1">
-            <h2 className="text-heading text-2xl font-medium">
-              Juggling Life and University
-            </h2>
-            <p className="mt-4 text-body">
-              University life is a maze of challenges, from academic demands to
-              personal battles. The pressure cooker of expectations,
-              relationships, finances, and the quest for identity—we understand
-              the whirlwind that young adults navigate. In these moments, mental
-              health often takes a backseat.
-            </p>
-            <div className="flex flex-col space-y-9 md:flex-row md:space-y-0 mt-12">
-              <SectionItem
-                icon={test}
-                title="PHQ-9 Screening Form"
-                description="The PHQ-9 self-assessment is a simple yet powerful tool used to gauge the presence and severity of depression symptoms."
-                linkText="Take Test >>"
-                linkHref="/screening"
-              />
-              <SectionItem
-                icon={searchResources}
-                title="Mental Health Resources"
-                description="Access trusted mental health guidance and effective techniques to manage depression, stress, or anxiety, along with contact details for local mental health support centers."
-                linkText="Search Mental Health Resources >>"
-                linkHref="/resources"
-              />
-            </div>
-          </div>
-          <img
-            src={stressGirl}
-            className="order-1 w-[300px] md:w-[500px] self-center md:self-start"
-            alt="stressed girl"
-          />
-        </section>
+      <main className="mt-16 md:mt-0">
+        <MainSection />
         <HomeSection
           img={happyBoy}
           heading={"Embracing Emotional Well-being"}
