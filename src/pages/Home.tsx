@@ -17,7 +17,7 @@ export default function Home() {
         aria-hidden="true"
       />
       <Hero />
-      <main className="mt-16 md:mt-0">
+      <main className="mt-16 lg:mt-0 space-y-16">
         <MainSection />
         <HomeSection
           img={happyBoy}

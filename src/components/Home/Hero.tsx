@@ -4,10 +4,10 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 export default function Hero() {
   return (
-    <header className="flex flex-col text-center leading-9 md:leading-normal md:text-left md:flex-row md:h-screen overflow-clip">
-      <Fade className="order-2 md:order-1" triggerOnce>
+    <header className="flex flex-col text-center leading-9 lg:leading-normal lg:text-left lg:flex-row lg:h-screen overflow-hidden">
+      <Fade className="order-2 lg:order-1" triggerOnce>
         <div className="space-y-5">
-          <h1 className="md:mt-16 text-heading leading-10 md:leading-[60px] text-3xl font-thin">
+          <h1 className="lg:mt-16 text-heading leading-10 lg:leading-[60px] text-3xl font-thin">
             <span className="font-bold">ZenScholar:</span>
             Tools & Resources for Student Mental Wellness
           </h1>
@@ -20,14 +20,14 @@ export default function Hero() {
             resources, and take the first step towards a brighter and more
             balanced campus life.
           </p>
-          <div className="mt-12 flex flex-col items-center space-y-5 md:flex-row md:items-start md:space-y-0 md:space-x-4">
+          <div className="mt-12 flex flex-col items-center space-y-5 lg:flex-row lg:items-start lg:space-y-0 lg:space-x-4">
             <Link to="/screening">
-              <button className="text-white bg-primary py-2 px-4 hover:bg-accent whitespace-nowrap">
+              <button className="w-[280px] lg:w-auto text-white bg-primary py-2 px-4 hover:bg-accent whitespace-nowrap">
                 Go to Depression Screening Test
               </button>
             </Link>
             <Link to="/resources">
-              <button className="border-primary border-2 py-2 px-4 hover:shadow-md whitespace-nowrap">
+              <button className="w-[280px] lg:w-auto border-primary border-2 py-2 px-4 hover:shadow-lg whitespace-nowrap">
                 Mental Health Resources
               </button>
             </Link>
@@ -41,9 +41,9 @@ export default function Hero() {
       <Slide
         triggerOnce
         direction="right"
-        className="order-1 md:order-2 self-center md:self-start"
+        className="order-1 lg:order-2 self-center lg:self-start lg:my-[20%] xl:my-0"
       >
-        <div className="w-[200px] md:w-[400px] lg:w-[500px]">
+        <div className="w-[200px] lg:w-[350px] xl:w-[500px]">
           <img src={hero} alt="girl meditating" />
         </div>
       </Slide>

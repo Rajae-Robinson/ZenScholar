@@ -7,10 +7,10 @@ import searchResources from "../../assets/icons/search-resources.svg";
 
 export default function MainSection() {
   return (
-    <section className="flex flex-col md:flex-row">
-      <Fade triggerOnce className="order-2 md:order-1">
+    <section className="flex flex-col lg:flex-row">
+      <Fade triggerOnce className="order-2 lg:order-1">
         <div>
-          <h2 className="text-heading text-2xl font-medium md:text-lg md:font-normal">
+          <h2 className="text-heading text-2xl font-medium lg:text-lg lg:font-normal">
             Juggling Life and University
           </h2>
           <p className="mt-4 text-body">
@@ -20,7 +20,7 @@ export default function MainSection() {
             the whirlwind that young adults navigate. In these moments, mental
             health often takes a backseat.
           </p>
-          <div className="flex flex-col space-y-9 md:flex-row md:space-y-0 mt-12">
+          <div className="flex flex-col space-y-9 lg:flex-row lg:space-y-0 mt-12">
             <SectionItem
               icon={test}
               title="PHQ-9 Screening Form"
@@ -41,9 +41,9 @@ export default function MainSection() {
       <Slide
         triggerOnce
         direction="right"
-        className="order-1 self-center md:self-start"
+        className="order-1 self-center lg:self-start"
       >
-        <div className="order-1 w-[300px] md:w-[500px]">
+        <div className="order-1 w-[300px] xl:w-[500px]">
           <img src={stressGirl} alt="stressed girl" />
         </div>
       </Slide>

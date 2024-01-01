@@ -18,14 +18,14 @@ export default function HomeSection({
 }: IHomeSection) {
   return (
     <Fade triggerOnce>
-      <section className="flex flex-col mt-6 lg:space-x-20 md:flex-row">
+      <section className="flex flex-col mt-6 lg:space-x-20 lg:flex-row">
         <img
           src={img}
-          className="w-[300px] md:w-[500px] self-center md:self-start"
+          className="w-[300px] xl:w-[500px] self-center lg:self-start"
           alt=""
         />
         <div className="space-y-4">
-          <h2 className="text-heading text-2xl font-medium md:text-lg md:font-normal">
+          <h2 className="text-heading text-2xl font-medium lg:text-lg lg:font-normal">
             {heading}
           </h2>
           <p className="lg:w-[70%] leading-relaxed">{body}</p>
