@@ -6,7 +6,7 @@ import Screening from "./pages/Screening";
 
 function App() {
   return (
-    <div className="px-2 sm:px-[10%] pb-8 relative text-body selection:bg-blue-400 selection:text-primary">
+    <div className="px-4 sm:px-[10%] pb-8 relative overflow-x-hidden text-body selection:bg-blue-400 selection:text-primary">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
