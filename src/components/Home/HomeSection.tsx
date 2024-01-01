@@ -16,10 +16,14 @@ export default function HomeSection({
   btnHref,
 }: IHomeSection) {
   return (
-    <section className="flex">
-      <img src={img} className="w-[500px]" alt="" />
+    <section className="flex flex-col mt-6 md:flex-row">
+      <img
+        src={img}
+        className="w-[300px] md:w-[500px] self-center md:self-start"
+        alt=""
+      />
       <div className="space-y-4">
-        <h2 className="text-heading text-lg">{heading}</h2>
+        <h2 className="text-heading text-2xl font-medium">{heading}</h2>
         <p>{body}</p>
         {btnText && btnHref ? (
           <Link to={btnHref}>
