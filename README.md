@@ -2,6 +2,9 @@
 
 A platform that supports university students struggling with depression, stress and anxiety.
 
+## System Documentation
+Visit [system documentation](https://github.com/Rajae-Robinson/ZenScholar/wiki/System-Documentation)
+
 ## Project Setup
 ### Clone the repository
 1. If you do not have git installed, install it [here](https://git-scm.com/downloads)
