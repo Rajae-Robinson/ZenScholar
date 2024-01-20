@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
-import HelpLineCard from "../components/Resources/HelpLineCard";
 import InfoCard from "../components/InfoCard";
-import WebResourcesCard from "../components/Resources/WebResourcesCard";
+import ScrollContainer from "../components/ScrollContainer";
+import ImageCardCTA from "../components/Resources/ImageCardCTA";
+import {
+  appointmentData,
+  webResourcesData,
+} from "../components/Resources/constants";
 
 export default function Resources() {
   return (
@@ -15,9 +19,8 @@ export default function Resources() {
         more.
       </p>
 
-      {/* MOH */}
       <Link to="#moh">
-        <h2 className="text-accent text-base mt-4 font-medium mb-2">
+        <h2 className="text-accent text-base mt-8 font-medium mb-2">
           Ministry of Health and Wellness Contact
         </h2>
       </Link>
@@ -47,67 +50,58 @@ export default function Resources() {
       </div>
 
       <Link to="#schedule-appointment">
-        <h2 className="text-accent text-base mt-4 font-medium mb-2">
+        <h2 className="text-accent text-base mt-8 font-medium mb-2">
           Schedule an Appointment
         </h2>
       </Link>
-      <div className="flex gap-x-6 w-full overflow-x-scroll">
-        <HelpLineCard />
-        <HelpLineCard />
-        <HelpLineCard />
-        <HelpLineCard />
-        <HelpLineCard />
-        <HelpLineCard />
-      </div>
+      <ScrollContainer>
+        {appointmentData.map((card, index) => (
+          <ImageCardCTA key={index} {...card} />
+        ))}
+      </ScrollContainer>
 
       <Link to="#mental-health-centers">
-        <h2 className="text-accent text-base mt-4 font-medium mb-2">
+        <h2 className="text-accent text-base mt-8 font-medium mb-2">
           Mental Health Centers
         </h2>
       </Link>
       <div className="flex gap-x-6 overflow-x-scroll">
-        <InfoCard />
+        <InfoCard
+          title={"Mental Health Clinic Schedules"}
+          description={"Schedules for all Mental Health Clinics in Jamaica"}
+          link={
+            "https://www.moh.gov.jm/wp-content/uploads/2019/03/MOH-Mental-Health-Clinic-Schedules.pdf"
+          }
+        />
       </div>
 
-      <Link to="#mental-health-centers">
-        <h2 className="text-accent text-base mt-4 font-medium mb-2">
+      <Link to="#web-resources">
+        <h2 className="text-accent text-base mt-8 font-medium mb-2">
           Web Resources
         </h2>
       </Link>
-      <div className="flex gap-x-6 overflow-x-scroll">
-        <WebResourcesCard />
-        <WebResourcesCard />
-        <WebResourcesCard />
-        <WebResourcesCard />
-      </div>
+      <ScrollContainer>
+        {webResourcesData.map((card, index) => (
+          <InfoCard key={index} {...card} />
+        ))}
+      </ScrollContainer>
+
       <Link to="#social-accounts">
-        <h2 className="text-accent text-base mt-4 font-medium mb-2">
+        <h2 className="text-accent text-base mt-8 font-medium mb-2">
           Social Accounts
         </h2>
       </Link>
       <div className="flex gap-x-6 overflow-x-scroll">
-        <HelpLineCard />
-        <HelpLineCard />
-        <HelpLineCard />
-        <HelpLineCard />
-        <HelpLineCard />
-        <HelpLineCard />
-      </div>
-      <Link to="#institutions-and-association">
-        <h2 className="text-accent text-base mt-4 font-medium mb-2">
-          Institutions and Associations
-        </h2>
-      </Link>
-      <div className="flex gap-x-6 overflow-x-scroll">
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
+        <ImageCardCTA
+          title={"Think Mental Health JA"}
+          imagePath={"/resources/think-mental-health.jpg"}
+          socialProfileLink="https://www.instagram.com/thinkmh_ja/"
+        />
+        <ImageCardCTA
+          title={"Jamaica Mental Health Advocacy Network"}
+          imagePath={"/resources/jmha-network.jpg"}
+          socialProfileLink="https://www.facebook.com/jamentalhealth/"
+        />
       </div>
     </>
   );

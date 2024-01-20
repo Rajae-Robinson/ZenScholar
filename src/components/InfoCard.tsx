@@ -1,17 +1,22 @@
-export default function InfoCard() {
+import { Link } from "react-router-dom";
+
+interface InfoCardProps {
+  title: string;
+  description: string;
+  link: string;
+}
+
+export default function InfoCard({ title, description, link }: InfoCardProps) {
   return (
-    <div className="w-[400px] min-w-[400px] p-6 bg-white border border-gray-200 rounded-lg shadow">
-      <a href="#">
-        <h5 className="mb-2 text-base font-bold tracking-tight text-gray-900">
-          MOH Mental Health Centers
-        </h5>
-      </a>
-      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-        description
-      </p>
-      <a
-        href="#"
-        className="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+    <div className="w-[300px] min-w-[300px] p-6 bg-white border border-gray-200 rounded-lg shadow">
+      <h5 className="mb-2 text-base font-bold tracking-tight text-primary text-center">
+        {title}
+      </h5>
+      <p className="mb-3 font-normal">{description}</p>
+      <Link
+        to={link}
+        target="_blank"
+        className="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-primary rounded-lg hover:bg-accent focus:ring-4 focus:outline-none focus:ring-blue-300"
       >
         Read more
         <svg
@@ -29,7 +34,7 @@ export default function InfoCard() {
             d="M1 5h12m0 0L9 1m4 4L9 9"
           />
         </svg>
-      </a>
+      </Link>
     </div>
   );
 }

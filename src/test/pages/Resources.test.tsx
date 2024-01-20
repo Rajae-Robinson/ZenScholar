@@ -25,9 +25,5 @@ describe("Resources Page", () => {
     expect(screen.getByText("Web Resources")).toBeInTheDocument();
     // should have social accounts heading
     expect(screen.getByText("Social Accounts")).toBeInTheDocument();
-    // should have mental health institutions and associations heading
-    expect(
-      screen.getByText("Institutions and Associations"),
-    ).toBeInTheDocument();
   });
 });
