@@ -5,9 +5,9 @@ import { screeningFAQData } from "../components/Screening/constants";
 export default function Screening() {
   return (
     <>
-      <p className="text-base text-heading mt-4 font-bold">
+      <h1 className="text-xl text-heading mt-4 font-bold">
         PHQ-9 Questionnaire
-      </p>
+      </h1>
       <Accordion accordionData={screeningFAQData} />
       <InfoAlert />
       <p className="mt-8 text-sm">
