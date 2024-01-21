@@ -4,8 +4,8 @@ export default function NotFound() {
   return (
     <div className="flex items-center justify-center text-xl h-[50vh]">
       <div>
-        <h1 style={{ color: "rgb(25, 25, 112)", fontSize: 40 }}>
-          <b>404 ERROR:</b> PAGE NOT FOUND
+        <h1 className="text-primary text-2xl ">
+          <strong>404 ERROR:</strong> PAGE NOT FOUND
         </h1>
         <h2>Oops! You seem to be lost.</h2>
         <p>Here are some helpful ZenScholar links:</p>
