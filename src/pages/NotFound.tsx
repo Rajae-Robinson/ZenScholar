@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export default function NotFound() {
   return (
-    <div className="flex items-center justify-center text-xl h-[50vh]">
+    <div className="flex items-center justify-center text-base h-[50vh]">
       <text>
-        <h1 className="text-primary text-2xl ">
+        <h1 className="text-primary text-2xl">
           <strong>404 ERROR:</strong> PAGE NOT FOUND
         </h1>
         <h2>Oops! You seem to be lost.</h2>
