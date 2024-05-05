@@ -24,12 +24,7 @@ export default function Accordion({ accordionData }: AccordionProps) {
   };
 
   return (
-    <div
-      id="accordion-flush"
-      data-accordion="collapse"
-      //   data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-      //   data-inactive-classes="text-gray-500 dark:text-gray-400"
-    >
+    <div id="accordion-flush" data-accordion="collapse">
       {accordionData.map((item: IAccordion) => (
         <div key={item.id}>
           <h2 id={`accordion-flush-heading-${item.id}`}>

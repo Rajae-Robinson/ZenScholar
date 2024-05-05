@@ -1,13 +1,10 @@
 import bg from "../assets/img/hero-bg.svg";
-
 import happyBoy from "../assets/img/happy-boy.svg";
 import onlineTest from "../assets/img/online-test.svg";
 import psychologist from "../assets/img/psychologist.svg";
-
 import Hero from "../components/Home/Hero";
 import HomeSection from "../components/Home/HomeSection";
 import MainSection from "../components/Home/MainSection";
-
 export default function Home() {
   return (
     <>
