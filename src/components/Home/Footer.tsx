@@ -4,29 +4,32 @@ export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scrolling behavior
+      behavior: "smooth",
     });
   };
 
   return (
     <footer>
-      <div className=" w-full bg-primary text-white  ">
+      <div className="w-full bg-primary text-white">
         <div className="max-w-7xl mx-auto pt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
-            <div className="mb-5 pl-8">
-              <br></br>
-              <br></br>
+            <div className="mb-5 pl-8 text-center">
+              <br />
+              <br />
               <h4 className="font-semibold text-base text-blue-300">
                 {" "}
                 ZenScholar
               </h4>
-              <p className="italic"> Resources for Student</p>
-              <p className="italic"> Mental Wellness</p>
+              <p className="italic">
+                Resources for Student
+                <br />
+                Mental Wellness
+              </p>
             </div>
 
-            <div className="mb-5">
+            <div className="mb-5 text-center">
               <h4 className="font-semibold text-sm">Pages</h4>
-              <br></br>
+              <br />
               <ul>
                 <Link to="#header" className="hover:text-blue-300">
                   <li className="pb-3" onClick={scrollToTop}>
@@ -47,7 +50,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="mb-5">
+            <div className="mb-5 text-center">
               <h4 className="font-semibold text-sm">Useful Links</h4>
               <br></br>
               <ul>
@@ -65,7 +68,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="mb-5">
+            <div className="mb-5 text-center">
               <h4 className="font-semibold text-sm"> MOH Emergency Contacts</h4>
               <br></br>
               <ul>
