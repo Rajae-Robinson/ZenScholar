@@ -5,7 +5,7 @@ export default function ResultsModal({
   body,
 }: {
   heading: string;
-  body: string;
+  body: React.ReactNode;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,7 +28,6 @@ export default function ResultsModal({
         View Results
       </button>
 
-      {/* Main modal */}
       {isOpen && (
         <div
           id="results-modal"
@@ -36,12 +35,10 @@ export default function ResultsModal({
           aria-hidden="true"
           className="fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-screen bg-black bg-opacity-50"
         >
-          <div className="relative p-4 w-full max-w-2xl">
-            {/* Modal content */}
+          <div className="relative p-4 w-full max-w-2xl max-h-screen overflow-y-auto">
             <div className="relative bg-white rounded-lg shadow">
-              {/* Modal header */}
               <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
-                <h3 className="text-xl font-semibold text-heading ">
+                <h3 className="text-xl font-semibold text-accent ">
                   {heading}
                 </h3>
                 <button
@@ -67,10 +64,7 @@ export default function ResultsModal({
                   <span className="sr-only">Close modal</span>
                 </button>
               </div>
-              {/* Modal body */}
-              <div className="p-4 md:p-5 space-y-4">
-                <p className="leading-relaxed text-gray-500 ">{body}</p>
-              </div>
+              <div className="p-4 md:p-5 space-y-4">{body}</div>
             </div>
           </div>
         </div>

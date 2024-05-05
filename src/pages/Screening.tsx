@@ -36,6 +36,15 @@ function InfoAlert() {
       </svg>
       <span className="sr-only">Info</span>
       <div>
+        <p>
+          The PHQ-9 depression screening tool provided on this website is for
+          informational purposes only and is not a substitute for professional
+          medical advice. It is designed to help assess depressive symptoms but
+          should not be used as a diagnostic tool. Consult with a qualified
+          healthcare professional for accurate assessment and treatment
+          recommendations.
+        </p>
+        <br />
         <i>
           We do not store any personal data or assessment results. Your
           participation is entirely anonymous and confidential.
