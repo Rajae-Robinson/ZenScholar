@@ -2,19 +2,17 @@ export default function About() {
   return (
     <div className="flex">
       <text>
-        <h1 className="text-primary text-2xl text-center font-bold mb-4">
-          About Us
-        </h1>
+        <h1 className="text-heading text-xl font-bold">About Us</h1>
 
-        <p className="text-center text-base">
+        <p className="mt-2 lg:w-[75%]">
           Welcome to the online platform dedicated to exploring the
           acceptability and perceptions of online screening to address
           depression among Jamaican university students.
         </p>
 
         <br></br>
-        <h2 className="text-xl font-semibold mb-4">Our Team</h2>
-        <p className="text-base">
+        <h2 className="text-base font-semibold mb-4">Our Team</h2>
+        <p className="mt-2 lg:w-[75%]">
           We are a dedicated team of students from the University of Technology,
           Jamaica, comprising Dominique Briscoe, Jada Walters, Lashea Beaton,
           Rajae Robinson, and Tyreque Hibbert. Under the supervision of
@@ -23,8 +21,8 @@ export default function About() {
         </p>
 
         <br></br>
-        <h2 className="text-xl font-semibold mt-6 mb-4">Our Mission</h2>
-        <p className="text-base">
+        <h2 className="text-base font-semibold mt-6 mb-4">Our Mission</h2>
+        <p className="mt-2 lg:w-[75%]">
           In an era where mental health is gaining recognition as a critical
           component of overall well-being, we recognized the pressing need to
           address depression among university students in Jamaica. Our mission
@@ -36,10 +34,10 @@ export default function About() {
         </p>
 
         <br></br>
-        <h2 className="text-xl font-semibold mt-6 mb-4">
+        <h2 className="text-base font-semibold mt-6 mb-4">
           Why This Project Matters
         </h2>
-        <p className="text-base">
+        <p className="mt-2 lg:w-[75%]">
           Depression is not just a global health concern; it&apos;s a local one
           too. With alarming statistics indicating its prevalence among
           Jamaicans, particularly within the university student population, our
@@ -51,8 +49,8 @@ export default function About() {
         </p>
 
         <br></br>
-        <h2 className="text-xl font-semibold mt-6 mb-4">Our Approach</h2>
-        <p className="text-base">
+        <h2 className="text-base font-semibold mt-6 mb-4">Our Approach</h2>
+        <p className="mt-2 lg:w-[75%]">
           Through rigorous research and collaboration with mental health
           professionals, we aim to delve deep into the acceptability and
           practicality of online screening tools. By soliciting feedback and
@@ -63,10 +61,10 @@ export default function About() {
         </p>
 
         <br></br>
-        <h2 className="text-xl font-semibold mt-6 mb-4">
+        <h2 className="text-base font-semibold mt-6 mb-4">
           Join Us in Making a Difference
         </h2>
-        <p className="text-base">
+        <p className="mt-2 lg:w-[75%]">
           We invite you to join us on this journey as we strive to make a
           meaningful impact on the mental health landscape of Jamaica. Whether
           you&apos;re a student, a mental health advocate, or simply someone
@@ -75,20 +73,18 @@ export default function About() {
         </p>
 
         <br></br>
-        <p className="mt-4 text-base">
+        <p className="mt-2 lg:w-[75%]">
           Together, let&apos;s pave the way for a brighter, more mentally
           resilient future for Jamaican university students.
         </p>
 
-        <br></br>
-        <p className="mt-8 text-base">Thank you for visiting our platform.</p>
-        <p className="font-semibold text-base">
+        <p className="mt-8 lg:w-[75%]">Thank you for visiting our platform.</p>
+        <p className="font-semibold mt-2 lg:w-[75%]">
           Dominique Briscoe, Jada Walters, Lashea Beaton, Rajae Robinson,
           Tyreque Hibbert
         </p>
 
-        <br></br>
-        <p className="italic text-base">
+        <p className="italic mt-2 lg:w-[75%]">
           University of Technology, Jamaica
           <br></br> Faculty of Engineering and Computing
           <br></br> PRJ4020: Major Project
