@@ -19,7 +19,7 @@ export default function Home() {
         className="absolute inset-0 h-screen w-full -z-20 object-cover object-center"
         aria-hidden="true"
       />
-      <header className="flex h-screen overflow-clip">
+      <header className="flex h-screen overflow-clip" id="header">
         <div className="h-fit flex">
           <div>
             <h1 className="mt-16 text-heading text-3xl font-thin">
@@ -142,7 +142,7 @@ export default function Home() {
                   <h4 className="font-semibold text-sm">Pages</h4>
                   <br></br>
                   <ul>
-                    <Link to="/" className="hover:text-blue-300">
+                    <Link to="/#header" className="hover:text-blue-300">
                       <li className="pb-3"> Home</li>
                     </Link>
                     <Link to="/resources" className="hover:text-blue-300">
