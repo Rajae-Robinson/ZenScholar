@@ -122,36 +122,79 @@ export default function Home() {
           btnHref="/resources"
         />
 
+        <footer>
+          <div className=" w-full bg-blue-950 text-white  ">
+            <div className="max-w-7xl mx-auto pt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+                <div className="mb-5 pl-8">
+                  <br></br>
+                  <br></br>
+                  <h4 className="font-semibold text-base text-blue-300">
+                    {" "}
+                    ZenScholar
+                  </h4>
 
-      <footer className="w-full bg-blue-950 text-white absolute bottom-0 inset-x-0 mt-30 pt-30 h-auto">
-        <div className=" w-full  flex justify-around space-y-8 h-auto">
-          
-          <div >
+                  <p className="italic"> Resources for Student</p>
+                  <p className="italic"> Mental Wellness</p>
+                </div>
+
+                <div className="mb-5">
+                  <h4 className="font-semibold text-sm">Pages</h4>
+                  <br></br>
+                  <ul>
+                    <Link to="/" className="hover:text-blue-300">
+                      <li className="pb-3"> Home</li>
+                    </Link>
+                    <Link to="/resources" className="hover:text-blue-300">
+                      <li className="pb-3">
+                        <i className="fa fa-chevron-right"></i> Resources
+                      </li>
+                    </Link>
+                    <Link to="/about" className="hover:text-blue-300">
+                      <li className="pb-3">
+                        <i className="fa fa-chevron-right"></i> About
+                      </li>
+                    </Link>
+                  </ul>
+                </div>
+
+                <div className="mb-5">
+                  <h4 className="font-semibold text-sm">Useful Links</h4>
+                  <br></br>
+                  <ul>
+                    <Link to="/resources" className="hover:text-blue-300">
+                      <li className="pb-3">
+                        <i className="fa fa-chevron-right"></i> Mental Health
+                        Resources{" "}
+                      </li>
+                    </Link>
+                    <Link to="/screening" className="hover:text-blue-300">
+                      <li className="pb-3">
+                        <i className="fa fa-chevron-right"></i> PHQ-9 Screening
+                        Test
+                      </li>
+                    </Link>
+                  </ul>
+                </div>
+
+                <div className="mb-5">
+                  <h4 className="font-semibold text-sm">
+                    {" "}
+                    MOH Emergency Contacts
+                  </h4>
+                  <br></br>
+                  <ul>
+                    <li className="pb-3">East Region: 876-927-2272</li>
+                    <li className="pb-3">Southern Region: 876-962-3370</li>
+                    <li className="pb-3">Western Region: 876-952-5100-9</li>
+                    <li className="pb-3">South East Region: 876-930-1152 </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div>
-            <ul>
-            <span className="text-white font-bold"> Resources</span>
-          <span className="text-white font-bold"> Resources</span>
-          <span className="text-white font-bold"> Resources</span>
-          <span className="text-white font-bold"> Resources</span>
-            </ul>
-
-          </div>
-
-          <div>
-          <span className="text-white font-bold" ><h4>Form</h4></span>
-          </div>
-
-          <div>
-          <span className="text-white font-bold" ><h4>Other Pages</h4></span>
-          </div>
-        </div>  
-
-      </footer>
+        </footer>
       </main>
-
-      
     </>
   );
 }
