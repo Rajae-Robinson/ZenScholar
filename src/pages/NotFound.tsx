@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function NotFound() {
   return (
     <div className="flex items-center justify-center text-xl h-[50vh]">
-      <div>
+      <text>
         <h1 className="text-primary text-2xl ">
           <strong>404 ERROR:</strong> PAGE NOT FOUND
         </h1>
@@ -16,6 +16,9 @@ export default function NotFound() {
         <Link to="/resources">&#10148;Resources</Link>
         <br></br>
         <Link to="/about">&#10148;About</Link>
+      </text>
+      <div className="fixed bottom-0 right-0 rounded-full shadow-md">
+        <img src="/resources/404-ERROR.jpg" />
       </div>
     </div>
   );
